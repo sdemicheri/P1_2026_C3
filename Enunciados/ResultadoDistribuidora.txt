@@ -1,0 +1,14 @@
+try:
+    num=int(input("ingrese productos nuevos: "))
+    if num<=0:
+        print("ingrese un numero valido")
+    else:
+        resto=num%100
+        dec=num//100
+        if resto>0:
+            esp=(dec+1)
+            print("Espacio físico necesario:", esp)
+        else:
+            print(num)
+except ValueError:
+    print("ingrese valor valido")
