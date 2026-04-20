@@ -1,0 +1,29 @@
+while True:
+    try:
+        precio = int(input("Hola Lu, ingresa el precio del peluche: $ "))
+        if precio < 0:
+            print("El precio no puede ser negativo.")
+        else:
+            break 
+            
+    except ValueError:
+        print("Error: Ingresa el valor numérico del peluche")
+        print("Intenta de nuevo.")
+billetes_100 = precio // 100
+precio = precio % 100
+billetes_50 = precio // 50
+precio = precio % 50
+billetes_20 = precio // 20
+precio = precio % 20
+billetes_10 = precio // 10
+precio = precio % 10
+billetes_5 = precio // 5
+precio = precio % 5
+billetes_1 = precio
+
+print(billetes_100, "billetes de $100")
+print(billetes_50, "billetes de $ 50")
+print(billetes_20, "billetes de $ 20")
+print(billetes_10, "billetes de $ 10")
+print(billetes_5, "billetes de $ 5")
+print(billetes_1, "billetes de $ 1")
