@@ -1,0 +1,50 @@
+1)Análisis
+Entrada:
+-Opción
+-Valor actual del abono
+-Mensajes (bienvenida, despedida)
+-Descuentos (descuento por cambio de plan, descuento por promoción)
+-Promociones
+
+Salida:
+-Mensaje Bienvenida
+-Listado de promociones
+-Valor abono con descuento por promoción
+-Valor abono cambio de plan y valor con descuento por cambio de plan aplicado
+-Mensaje Despedida
+
+Proceso:
+Primero, mostrar el mensaje de bienvenida y el listado de opciones, pedir al usuario que elija una opción y verificar si es correcta. Si la opcion es 1, mostrar el listado de promociones; si es 2, pedir el valor del abono actual, calcular el valor con el descuento por promocion aplicado y mostrarlo; si es 3, mostrar el valor del abono con el cambio de plan, calcular el valor con el descuento por cambio de plan aplicado y mostrarlo; y, si es 0, mostrar el mensaje de despedida. Verificar: comprobar si la opcion es mayor a 0 y menor a 4, sigo con el resto del proceso. Calcular: multiplicar el abono por 100 menos el descuento y dividirlo por 100
+
+2)Diseño
+Inicio
+	definir opcion, desc_promo, desc_cambio como entero
+	definir abono_actual, abono_desc, nuevo_plan, nuevo_plan_desc
+	definir mensaje_bienvenida, mensaje_despedida, promociones, opciones como cadena
+	opcion = 0
+	abono_actual = 0
+	abono_desc = 0
+	nuevo_plan = 3000
+	nuevo_plan_desc = 0
+	desc_promo = 15
+	desc_cambio = 25
+	mensaje_bienvenida = "Hola"
+	mensaje_despedida = "Chau"
+	promociones = "Promociones"
+	opciones = "1. Promociones, 2. Descuento por promoción, 3. Cambio de plan, 0. Finalizar interacción"
+	mostrar opciones
+	leer opcion
+	si opcion es 1 entonces 
+		mostrar promociones
+	si opcion es 2 entonces 
+		leer abono_actual
+		abono_desc = abono_actual * (100 - desc_promo) / 100
+		mostrar abono_desc 
+	si opcion es 3 entonces 
+		mostrar nuevo_plan
+		nuevo_plan_desc = nuevo_plan * (100 - desc_cambio) / 100
+		mostrar nuevo_plan_desc
+	si opcion es 0 entonces 
+		mostrar mensaje_despedida
+	fin_si_multiple
+Fin
