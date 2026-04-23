@@ -1,6 +1,7 @@
 opcion = 0
 saldo = 10000
 DATOS=3000
+contador=0
 
 while opcion != 5:
 
@@ -12,6 +13,7 @@ while opcion != 5:
     print("5. Salir")
 
     opcion = int(input("Seleccione una opción: "))
+    contador+=1
 
     if opcion == 1:
         print("\nSu saldo actual es: $", saldo)
@@ -34,6 +36,7 @@ while opcion != 5:
 
     elif opcion == 5:
         print("\nGracias por comunicarse. ¡Hasta luego!")
+        print("Realizaste", contador-1, "operaciones")
 
     else:
         print("Opción inválida. Intente nuevamente.")
