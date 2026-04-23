@@ -23,6 +23,9 @@ while opcion != 5:
 
     elif opcion == 3:
         monto = int(input("Ingrese monto a recargar: "))
+        while monto < 0:
+            print("Ingrese un valor valido")
+            monto = int(input("Ingrese monto a recargar: "))            
         saldo = saldo + monto
         print("Recarga exitosa. Nuevo saldo: $", saldo)
     
