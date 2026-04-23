@@ -1,5 +1,6 @@
 opcion = 0
 saldo = 10000
+consumo = 0
 
 while opcion != 4:
 
@@ -7,7 +8,8 @@ while opcion != 4:
     print("1. Consultar saldo")
     print("2. Ver promociones")
     print("3. Recargar saldo")
-    print("4. Salir")
+    print("4. Ver consumo de saldo")
+    print("5. Salir")
 
     opcion = int(input("Seleccione una opción: "))
 
@@ -23,8 +25,10 @@ while opcion != 4:
         monto = int(input("Ingrese monto a recargar: "))
         saldo = saldo + monto
         print("Recarga exitosa. Nuevo saldo: $", saldo)
-
     elif opcion == 4:
+        print("\n"
+              "Se ha consumido", consumo, "de saldo")
+    elif opcion == 5:
         print("\nGracias por comunicarse. ¡Hasta luego!")
 
     else:
