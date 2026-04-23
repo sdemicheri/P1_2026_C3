@@ -2,6 +2,7 @@ opcion = 0
 saldo = 10000
 DATOS_CONSUMIDOS = 30
 interacciones = 0
+recargas = 0
 
 while opcion != 5:
 
@@ -25,13 +26,18 @@ while opcion != 5:
         interacciones = interacciones + 1
         
     elif opcion == 3:
-        monto = int(input("Ingrese monto a recargar: "))
-        if monto < 0:
-            print("Ingrese un monto positivo")
-        else:
-            saldo = saldo + monto
+        recargas = recargas + 1
+        if recargas < 3:
+            monto = int(input("Ingrese monto a recargar: "))
+            if monto < 0:
+                print("Ingrese un monto positivo")
+            else:
+                saldo = saldo + monto
             print("Recarga exitosa. Nuevo saldo: $", saldo)
-        interacciones = interacciones + 1    
+            interacciones = interacciones + 1
+        else:
+            print("Cantidad de recargas superadas")
+            
         
     elif opcion == 4:
         print("\nDatos consumidos: ", DATOS_CONSUMIDOS)
