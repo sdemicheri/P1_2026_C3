@@ -3,9 +3,9 @@ saldo = 10000
 DATOS_CONSUMIDOS = 30
 interacciones = 0
 recargas = 0
-try:
-    while opcion != 5:
 
+while opcion != 5:
+    try:
         print("\n--- MENÚ PRINCIPAL ---")
         print("1. Consultar saldo")
         print("2. Ver promociones")
@@ -51,5 +51,5 @@ try:
     
             case _:
                 print("Opción inválida. Intente nuevamente.")
-except ValueError:
-    print("Valor no valido, ingrese un valor valido")
+    except ValueError:
+        print("Ingrese un caracter válido")
