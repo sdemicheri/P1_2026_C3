@@ -28,8 +28,8 @@ while opcion != 5:
                 if recarga < 3:
                     recarga += 1
                     monto = int(input("Ingrese monto a recargar: "))
-                    while monto < 0:
-                        print("Ingrese un valor positivo")
+                    while monto <= 0:
+                        print("Ingrese un valor mayor a 0")
                         monto = int(input("Ingrese monto a recargar: "))
                     saldo = saldo + monto
                     print("Recarga exitosa. Nuevo saldo: $", saldo)
