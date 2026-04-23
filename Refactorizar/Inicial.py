@@ -2,6 +2,7 @@ opcion = 0
 saldo = 10000
 DATOS=3000
 contador=0
+recargas=3
 
 while opcion != 5:
 
@@ -24,13 +25,17 @@ while opcion != 5:
         print("- 30% de descuento en datos móviles")
 
     elif opcion == 3:
-        monto = int(input("Ingrese monto a recargar: "))
-        while monto < 0:
-            print("Ingrese un valor valido")
-            monto = int(input("Ingrese monto a recargar: "))            
-        saldo = saldo + monto
-        print("Recarga exitosa. Nuevo saldo: $", saldo)
-    
+        if recargas != 0:
+            monto = int(input("Ingrese monto a recargar: "))
+            while monto < 0:
+                print("Ingrese un valor valido")
+                monto = int(input("Ingrese monto a recargar: "))            
+            saldo = saldo + monto
+            print("Recarga exitosa. Nuevo saldo: $", saldo)
+            recargas-=1
+        else:
+            print("Supero la cantidad de recargas disponibles")
+
     elif opcion == 4:
         print("\nSus datos consumidos son: $", DATOS)
 
