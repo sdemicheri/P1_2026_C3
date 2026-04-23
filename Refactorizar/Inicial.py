@@ -2,7 +2,7 @@
 opcion = 0
 saldo = 10000
 SALDO_USADO = 3000
-
+usos = 0
 while opcion != 5:
     print("\n--- MENÚ PRINCIPAL ---")
     print("1. Consultar saldo")
@@ -35,7 +35,8 @@ while opcion != 5:
         print("saldo utilizado hasta el momento $", SALDO_USADO)
 
     elif opcion == 5:
-        print("\nGracias por comunicarse. ¡Hasta luego!, sus interracciones fueron")
+        print("\nGracias por comunicarse. ¡Hasta luego!, sus interracciones fueron", usos)
 
     else:
         print("Opción inválida. Intente nuevamente.")
+    usos += 1
