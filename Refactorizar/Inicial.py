@@ -2,7 +2,7 @@ CREDITO_GASTADO = 0
 opcion = 0
 saldo = 10000
 
-while opcion != 4:
+while opcion != 5:
 
     print("\n--- MENÚ PRINCIPAL ---")
     print("1. Consultar saldo")
@@ -24,12 +24,18 @@ while opcion != 4:
         elif opcion == 3:
             try:
                 monto = int(input("Ingrese monto a recargar: "))
-                saldo = saldo + monto
-                print("Recarga exitosa. Nuevo saldo: $", saldo)
+                if monto > 0:
+                    saldo = saldo + monto
+                    print("Recarga exitosa. Nuevo saldo: $", saldo)
+                else:
+                    print("Ingrese un valor positivo")
             except ValueError:
                 print("Ingrese un valor valido")
+
         elif opcion == 4:
             print("Su credito gastado es: ",  CREDITO_GASTADO)
+
+        
         elif opcion == 5:
             print("\nGracias por comunicarse. ¡Hasta luego!")
 
